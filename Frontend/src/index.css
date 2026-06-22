@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.animate-zoom {
+  animation: zoom 8s ease-in-out infinite alternate;
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.animate-progress {
+  animation: progress 5s linear forwards;
+}
+
+/* Better pagination */
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: white;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.2);
+}
